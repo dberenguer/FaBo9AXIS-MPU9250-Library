@@ -202,7 +202,7 @@ class FaBo9Axis {
     void readMagnetXYZ(float * mx, float * my, float * mz);
     void readTemperature(float * temperature);
     void dumpConfig(void);
-  private:
+  protected:
     uint8_t _mpu9250addr;
     float _gres, _ares, _mres;
     float _magXcoef, _magYcoef, _magZcoef;
