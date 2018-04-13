@@ -18,8 +18,7 @@
  @param [in] addr MPU-9250 I2C slave address
 */
 FaBo9Axis::FaBo9Axis(uint8_t addr) {
-  _mpu9250addr = addr;
-  Wire.begin();
+  _mpu9250addr = addr;  
 }
 
 /**
@@ -28,6 +27,7 @@ FaBo9Axis::FaBo9Axis(uint8_t addr) {
  @retval false device error
 */
 bool FaBo9Axis::begin() {
+  Wire.begin();
   if (searchDevice()) {
     configMPU9250();
     configAK8963();
